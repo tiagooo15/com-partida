@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    background-color: #1d7fff;
+    height: calc(80px + 10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logos {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 3px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 782px;
+    margin: 0 auto;
+    margin-inline-end: 10px;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 10px;
+    list-style: none;
+    right: 100%;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    line-height: 90px;
+    margin: 0 0px;
+    text-transform: uppercase;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.nav-menu-link:hover {
+    background: none;
+    color: #83c5f7;
+}
+
+.nav-toggle {
+    display: none;
+    transition: left 0.3s;
+}
+
+.header img {
+    max-width: 200px;
+    max-height: 200px;
+    background: none;
+    left: calc(15px + 1%);
+    top: 50%;
+    padding: 5px;
+    position: absolute;
+    transform: translateY(-50%);
+    display: inline-block;
+    border-radius: 25px;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-family: sans-serif;
+        padding: 70px;
+    }
+
+    .header {
+        height: auto;
+        width: 100%;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: 100%;
+        background: rgba(0, 4, 255);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        right: 100%;
+        transition: left 1s;
+    }
+
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+        background: none;
+        color: #83c5f7;
+    }
+
+    .nav-menu {
+        display: block;
+        transition: left 1s;
+    }
+
+    .nav-menu_hidden {
+        right: 100%;
+    }
+
+    .nav-menu_visible {
+        right: 0;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .logos {
+        display: inline-block;
+        max-width: 40px;
+        margin-left: 85px;
+        margin-top: 4px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        background: rgb(71, 73, 196);
+        position: fixed;
+        top: 60px;
+        width: 60%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        transition: left 1s;
+        right: 100%;
+    }
+
+    .nav-menu_visible {
+        right: 0;
+        margin-right: 0;
+        display: block;
+        z-index: 10;
+    }
+
+    .nav-toggle {
+        color: rgb(255, 255, 255);
+        background: none;
+        border: none;
+        font-size: 30px;
+        padding: 0 20px;
+        line-height: 60px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-toggle:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #424242;
+    padding: 5px;
+    color: #40a5f1;
+    z-index: 1;
+}
+
+.info-cont {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    margin-top: 7px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-menu_visible a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #83c5f7;
+    background: none;
+}
+
+.main-h1 {
+    font-size: 26px;
+    color: rgb(17, 87, 145);
+    max-width: 700px;
+    text-align: center;
+    padding: 10px;
+}
+
+.calendario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    font-size: small;
+    margin-top: 30px;
+    margin-bottom: calc(100px);
+}
+
+.main-calendario {
+    margin-bottom: 100px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 1 10px;
+    margin-bottom: 160px;
+}
+
+td,
+th {
+    border: 1px solid black;
+}
+
+td {
+    vertical-align: middle;
+}
+
+.cont-menu {
+    display: none;
+}
+
+.nav-menu-item:hover .cont-menu {
+    display: block;
+}
+
+.cont-menu {
+    font-size: small;
+    list-style: none;
+    padding: 0;
+    line-height: 2;
+    margin-left: 15px;
+}
+
+.cont-menu a:hover {
+    color: #83c5f7;
+}
+
+.footer-hidden {
+    display: none;
+}
+
+
+.nav-menu-item>.cont-menu {
+    display: none !important;
+}
+
+@media (max-width: 900px) {
+    .nav-menu-item:hover>.cont-menu {
+        display: block !important;
+    }
+}
+
+
+@media (min-width:900px) {
+    .div-main {
+        text-align: center;
+    }
+
+    .main-h1 {
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .main-p {
+        margin-top: 20px;
+    }
+}
+
+.start-main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.div-main {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+.lorem {
+    padding: 15px;
+    background-color: #dbdbdb;
+    border: 1px solid;
+    margin: 15px;
+}
+
+.main-p {
+    text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        
+    } 
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black !important;
+        color: white;
+    }
+}
+
+.footer-hidden {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .calendario{
+        margin: 25px;
+        margin-bottom: 150px;
+    }
+    .calendario-wrapper {
+        margin-left: 50px;
+        margin-top: 120px;
+    }
+}
+
+.main-recursos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.recu-h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recu-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
+    margin-top: 150px;
+}
+
+.main-actualizaciones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.actu-h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-actu {
+    display: grid;
+    margin: calc(10%);
+}
+
+.main-recursos {
+    margin: 105px;
+}
